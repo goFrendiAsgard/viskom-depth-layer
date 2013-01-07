@@ -18,7 +18,7 @@
                 var layer = layers[i]
                 var img = '<img id="img_'+i+'" class="img_layer" src="obj_'+layer.toString()+'.0.png" />';
                 $("#container_3d").append(img);
-                left = Math.ceil(layer);
+                left = Math.round(layer);
                 $("#img_"+i).css('left', left);
                 if(i==layers.length-1){
                     $("#container_3d").width($("#img_"+i).width());
@@ -42,7 +42,7 @@
             for(var i=0; i<layers.length; i++){
                 var layer = layers[i];
                 var new_left = layer+position*(-layer/max_position);
-                new_left = Math.ceil(new_left)
+                new_left = Math.round(new_left)
                 $("#img_"+i).css('left', new_left);
             }
         }
